@@ -27,7 +27,7 @@ module:
     class_variable_get: ''
     class_variable_set: ''
     class_variables: ''
-    clone: "क्लोन"
+    clone: "प्रतिकृति"
     const_defined?: ''
     const_get: ''
     const_missing: ''
@@ -243,7 +243,7 @@ module:
     class_variable_get: ''
     class_variable_set: ''
     class_variables: ''
-    clone: "क्लोन"
+    clone: "प्रतिकृति"
     const_defined?: ''
     const_get: ''
     const_missing: ''
