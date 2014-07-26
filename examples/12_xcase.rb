@@ -1,5 +1,21 @@
 require 'rubyvernac-marathi'
 
+# # Example Code -- 
+#
+# cast = [1,2,3,4].shuffle.first
+#
+# case cast
+# when 1
+#   puts "it's one"
+# when 2
+#   something..
+# when 3
+#  something..
+# when 4
+#  something..
+# end
+#
+
 पात्र = ['राजा', 'मंत्री', 'चोर', 'सिपाही'].पिस.शेवटचा
 
 टप्पा पात्र
