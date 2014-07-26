@@ -1,8 +1,11 @@
 require 'rubyvernac-marathi'
 
 # if condition
+#    do_something..
 # else
+#    do_this_other_thing..
 # end
+#
 
 नशीब = [सत्य , असत्य ].पिस.पहिला 
 
