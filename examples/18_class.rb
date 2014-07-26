@@ -1,5 +1,16 @@
 require 'rubyvernac-marathi'
 
+# 
+# class Student
+#   attr_accessible :name
+#  
+#  def passed?
+#    puts 'something when passed'
+#    return true
+#  end
+# end
+#
+
 साचा Cविद्यार्थी
 
   बाहेर_दाखव :नाव
@@ -10,6 +21,11 @@ require 'rubyvernac-marathi'
   शेवट
 
 शेवट
+
+# boy = Student.new
+# boy.name = 'somename'
+# boy.passed?
+#
 
 मुलगा = Cविद्यार्थी.नवीन
 मुलगा.नाव = 'चिंटू'
