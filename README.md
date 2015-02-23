@@ -27,7 +27,14 @@ Or install it yourself as:
 
 ## Usage
 
-See examples directory.
+Install Go 1.4 or later - https://golang.org/doc/install
+Install keyword-parser package.
+
+    $ go get github.com/RainingClouds/keyword-parser
+
+Run any example code using - 
+
+    $ keyword-parser examples/{file.rb} ruby lib/tranlsations/keywords.txt  
 
 ## Contributing
 
