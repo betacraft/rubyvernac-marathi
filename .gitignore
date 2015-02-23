@@ -20,3 +20,5 @@ tmp
 *.o
 *.a
 mkmf.log
+*.Ds_Store
+*/*.Ds_Store
