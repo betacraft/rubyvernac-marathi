@@ -2,8 +2,12 @@ require 'rubyvernac/marathi'
 require 'yaml'
 require 'pry'
 
+spec = Gem::Specification.find_by_name("rubyvernac-marathi")
+gem_root = spec.gem_dir
+gem_lib = gem_root + "/lib"
 # create aliases - 
-Dir.glob('/home/appsurfer/projects/rubyvernac-marathi/lib/translations/*').each do |filepath|
+#puts "Creating aliases"
+Dir.glob(gem_lib+'/translations/*').each do |filepath|
   content = YAML::load_file(File.expand_path"#{filepath}")
   #puts "working on file #{filepath}"
     
@@ -15,16 +19,20 @@ Dir.glob('/home/appsurfer/projects/rubyvernac-marathi/lib/translations/*').each 
     
   # class methods - 
   content.first.last['cpumethods'].each do |k, v|
-    #puts "synching -- #{k} to #{v}"
+    #puts "syncing -- #{k} to #{v}"
     Object.class_eval(class_name).singleton_class.
       send(:alias_method, v.to_sym, k.to_sym) unless v.chop.length.zero?
   end
 
   content.first.last['cprmethods'].each do |k, v|
     #puts "synching -- #{k} to #{v}"
+    begin
+      Object.class_eval(class_name).singleton_class.
+        send(:alias_method, v.to_sym, k.to_sym) unless v.chop.length.zero?      
+    rescue 
+      
+    end
 
-    Object.class_eval(class_name).singleton_class.
-        send(:alias_method, v.to_sym, k.to_sym) unless v.chop.length.zero?
 
   end
 
@@ -39,9 +47,13 @@ Dir.glob('/home/appsurfer/projects/rubyvernac-marathi/lib/translations/*').each 
   # instance methods - 
   content.first.last['iprmethods'].each do |k, v|
     #puts "synching -- #{k} to #{v}"
+    begin
+      Object.class_eval(class_name).send(:alias_method, v.to_sym,k.to_sym) unless 
+                                                    v.chop.length.zero?    
+    rescue Exception => e
+        
+    end  
       
-    Object.class_eval(class_name).send(:alias_method, v.to_sym,k.to_sym) unless 
-                                                    v.chop.length.zero?
   end if content.first.last['iprmethods']
     
 end
