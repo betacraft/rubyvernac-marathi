@@ -22,7 +22,8 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rubyvernac-marathi
+    $ gem build rubyvernac-marathi.gemspec
+    $ sudo gem install rubyvernac-marathi-0.0.1.gem
 
 ## Usage
 
