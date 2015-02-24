@@ -9,7 +9,7 @@ gem_lib = gem_root + "/lib"
 #puts "Creating aliases"
 Dir.glob(gem_lib+'/translations/*.yml').each do |filepath|
   content = YAML::load_file(File.expand_path"#{filepath}")
-  puts "working on file #{filepath}"
+  # puts "working on file #{filepath}"
   begin
     class_name = content.keys.first.capitalize      
     rescue Exception => e
