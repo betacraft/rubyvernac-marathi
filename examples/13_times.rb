@@ -4,6 +4,6 @@ require 'rubyvernac-marathi'
 #   puts 'wooo'
 # end
 
-10.वेळा कर
+१०.वेळा कर
   छाप " गरगर गरगर "
 शेवट
