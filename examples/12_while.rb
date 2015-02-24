@@ -6,7 +6,7 @@ require 'rubyvernac-marathi'
 # end
 #
 
-उधार ५
+उधार = ५
 रोख = ०
 
 ज्यादरम्यान रोख < उधारी
