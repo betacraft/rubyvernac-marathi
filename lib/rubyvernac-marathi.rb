@@ -7,11 +7,16 @@ gem_root = spec.gem_dir
 gem_lib = gem_root + "/lib"
 # create aliases - 
 #puts "Creating aliases"
-Dir.glob(gem_lib+'/translations/*').each do |filepath|
+Dir.glob(gem_lib+'/translations/*.yml').each do |filepath|
   content = YAML::load_file(File.expand_path"#{filepath}")
-  #puts "working on file #{filepath}"
-    
-  class_name = content.keys.first.capitalize
+  puts "working on file #{filepath}"
+  begin
+    class_name = content.keys.first.capitalize      
+    rescue Exception => e
+      puts "exception in getting classname #{e}"
+      return     
+  end  
+
 
   # class name - 
   # class_trans = content[content.keys.first]['cname']
