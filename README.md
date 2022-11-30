@@ -14,7 +14,7 @@ I see two benefits to be able to write programmes in mother tongue -
 
 Add this line to your application's Gemfile:
 
-    gem 'rubyvernac-marathi'
+    gem 'rubyvernac-marathi', git: "https://github.com/betacraft/rubyvernac-marathi"
 
 And then execute:
 
@@ -27,14 +27,9 @@ Or install it yourself as:
 
 ## Usage
 
-Install Go 1.4 or later - https://golang.org/doc/install
-Install keyword-parser package.
-
-    $ go get github.com/RainingClouds/keyword-parser
-
 Run any example code using - 
 
-    $ keyword-parser examples/{file.rb} ruby lib/tranlsations/keywords.txt  
+    $ ruby_marathi <file-path-here>
 
 ## Contributing
 

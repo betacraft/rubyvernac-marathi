@@ -4,5 +4,9 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rake', '~> 10.3.2'
-gem 'pry', '~> 0.10.0'
-gem 'google-translate', '~> 1.0.1'
+
+gem "pry", "~> 0.14.1"
+
+gem "yaml", "~> 0.2.0"
+
+gem 'ruby-vernac-parser', git: 'https://github.com/betacraft/ruby-vernac-parser'
